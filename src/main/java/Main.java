@@ -12,17 +12,17 @@ public class Main {
 
         Person person1 = new Person();
         person1.setName("Dane Joe");
-        person1.setAddress("Denver str");
+        person1.setAddress("Denver str. 57");
         person1.setCity("Manchester");
         person1.setState("England");
         person1.setPostalCode("BT3900");
 
         Person person2 = new Person();
-        person2.setName("Dane Joe");
-        person2.setAddress("Denver str");
-        person2.setCity("Manchester");
-        person2.setState("England");
-        person2.setPostalCode("BT3900");
+        person2.setName("Helen Donavan");
+        person2.setAddress("Main str. 18");
+        person2.setCity("Brugge");
+        person2.setState("Belgium");
+        person2.setPostalCode("B-8000");
 
 
         Package twoDayPackage = new TwoDayPackage(person, person1, 1.5d, 5.00d, 10.00d);
