@@ -25,23 +25,23 @@ public class Main {
         person2.setPostalCode("B-8000");
 
 
-        Package twoDayPackage = new TwoDayPackage(person, person1, 1.5d, 5.00d, 10.00d);
-        System.out.println("Cost for two day delivery: " + twoDayPackage.calculateCost());
+        Package twoDayPackage = new TwoDayPackage(person, person1, 1.5, -7, 10.00);
+        System.out.println("Cost for two day delivery 1: " + twoDayPackage.calculateCost());
 
-        Package twoDayPackage2 = new TwoDayPackage(person2, person1, 3d, 5.00, 10.00);
-        System.out.println("Cost for two day delivery: " + twoDayPackage2.calculateCost());
+        Package twoDayPackage2 = new TwoDayPackage(person2, person1, -1, 5.00, 10.00);
+        System.out.println("Cost for two day delivery 2: " + twoDayPackage2.calculateCost());
 
         Package twoDayPackage3 = new TwoDayPackage(person2, person, 5, 5.00, 10.00);
-        System.out.println("Cost for two day delivery: " + twoDayPackage3.calculateCost());
+        System.out.println("Cost for two day delivery 3: " + twoDayPackage3.calculateCost());
 
-        Package overnightPackage = new OvernightPackage(person, person2, 1.5, 5, 10.00);
-        System.out.println("Cost for one night delivery: " + overnightPackage.calculateCost());
+        Package overnightPackage = new OvernightPackage(person, person2, 1.5, -1, 10.00);
+        System.out.println("Cost for one night delivery 1: " + overnightPackage.calculateCost());
 
         Package overnightPackage2 = new OvernightPackage(person2, person, 2, 5, 10.00);
-        System.out.println("Cost for one night delivery: " + overnightPackage2.calculateCost());
+        System.out.println("Cost for one night delivery 2: " + overnightPackage2.calculateCost());
 
         Package overnightPackage3 = new OvernightPackage(person1, person2, 0.5, 5, 10.00);
-        System.out.println("Cost for one night delivery: " + overnightPackage3.calculateCost());
+        System.out.println("Cost for one night delivery 3: " + overnightPackage3.calculateCost());
 
 
         List<Package> listOfPackages = List.of(twoDayPackage, twoDayPackage2, twoDayPackage3, overnightPackage, overnightPackage2, overnightPackage3);

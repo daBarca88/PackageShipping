@@ -7,12 +7,18 @@ public class OvernightPackage extends Package{
         this.additionalFee = additionalFee;
     }
 
+    public double getAdditionalFee() {
+        return additionalFee;
+    }
+
+    public void setAdditionalFee(double additionalFee) {
+        this.additionalFee = additionalFee;
+    }
+
     @Override
     double calculateCost() {
         double totalCostPerOunce = super.costPerOunce + additionalFee;
         double totalCost = super.weightInOunce * totalCostPerOunce;
         return totalCost;
     }
-
-
 }

@@ -7,11 +7,21 @@ public abstract class Package {
     public Package(Person sender, Person recipient, double weightInOunce, double costPerOunce) {
         this.sender = sender;
         this.recipient = recipient;
-        this.weightInOunce = weightInOunce;
-        this.costPerOunce = costPerOunce;
+        if (weightInOunce < 0) {
+            this.weightInOunce = 0.1;
+        } else {
+            this.weightInOunce = weightInOunce;
+        }
+
+        if (costPerOunce < 0) {
+            this.costPerOunce = 1;
+        } else {
+            this.costPerOunce = costPerOunce;
+        }
+
     }
 
-    double calculateCost(){
+    double calculateCost() {
         return weightInOunce * costPerOunce;
     }
 
@@ -36,11 +46,7 @@ public abstract class Package {
     }
 
     public void setWeightInOunce(double weightInOunce) {
-        if (weightInOunce < 0){
-            this.weightInOunce = 0;
-        } else {
-            this.weightInOunce = weightInOunce;
-        }
+        this.weightInOunce = weightInOunce;
     }
 
     public double getCostPerOunce() {
@@ -48,10 +54,6 @@ public abstract class Package {
     }
 
     public void setCostPerOunce(double costPerOunce) {
-        if (costPerOunce < 0) {
-            this.costPerOunce = 0;
-        } else {
-            this.costPerOunce = costPerOunce;
-        }
+        this.costPerOunce = costPerOunce;
     }
 }
